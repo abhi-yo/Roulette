@@ -1,6 +1,6 @@
-# TypeScript Casino Games
+# Casino Games Web Application
 
-A simple casino implementation featuring slot machines and roulette, built with TypeScript.
+A browser-based casino application featuring Slots and Roulette games, built with TypeScript.
 
 ## Screenshot
 
@@ -8,104 +8,122 @@ A simple casino implementation featuring slot machines and roulette, built with 
 
 ## Features
 
-- Slot machine with different symbol combinations
-- European Roulette with standard number layout
-- Real-time balance updates
-- Animated game results
-- Error handling for invalid bets
+- 🎰 Slot Machine
+  - Multiple symbol combinations
+  - Different payout multipliers
+  - Animated reel spins
 
-## Roulette Implementation
+- 🎲 Roulette
+  - Bet on red/black
+  - Bet on specific numbers
+  - Animated number spinner
 
-### Number Layout
+- 💰 Player Management
+  - Balance tracking
+  - Transaction history
+  - Bet validation
+  - Win/loss tracking
 
-The roulette wheel uses the standard European layout with numbers 0-36:
+## Technologies Used
 
+- **TypeScript** - For type-safe JavaScript development
+- **lite-server** - Development server with live reload
+- **browser-sync** - Browser synchronization for development
+- **ts-node** - TypeScript execution engine
+- **ES Modules** - For modular JavaScript code
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm (Node Package Manager)
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd casino-games
 ```
-Layout (clockwise):
-0 (green)
-32-15-19-4-21-2-25-17-34-6-27-13-36-11-30-8-23-10-5-24-16-33-1-20-14-31-9-22-18-29-7-28-12-35-3-26
-```
 
-Numbers are divided into three colors:
-- **Green**: 0
-- **Black**: 2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35
-- **Red**: 1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36
-
-### Betting Options
-
-1. **Color Bets**
-   - Red: Pays 2:1 on red numbers
-   - Black: Pays 2:1 on black numbers
-   - Zero (green) loses on color bets
-
-2. **Number Bets**
-   - Straight up: Bet on any single number (0-36)
-   - Pays 35:1 on a win
-
-## Project Setup
-
-1. Install dependencies:
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-2. Compile TypeScript:
-```bash
-tsc
-```
-
-3. Run application:
+3. Build the project:
 ```bash
 npm run build
+```
+
+4. Start the development server:
+```bash
 npm start
 ```
 
-## File Structure
-
+5. Open your browser and navigate to:
 ```
-casino/
+http://localhost:3000
+```
+
+The server will automatically reload when you make changes to the source files.
+
+## Game Rules
+
+### Slots
+- Minimum bet: $1
+- Maximum bet: $1,000,000
+- Payouts:
+  - Triple 7️⃣: 5x
+  - Triple 💎: 4x
+  - Triple 🎰: 3x
+  - Triple 🍒/🍊/🍋: 2x
+
+### Roulette
+- Minimum bet: $1
+- Maximum bet: $1,000,000
+- Payouts:
+  - Number (0-36): 35x
+  - Red/Black: 2x
+
+## Development
+
+### Project Structure
+```
+casino-games/
 ├── src/
-│   ├── index.ts       # Core game logic
-│   └── app.ts         # UI implementation
-├── dist/              # Compiled JavaScript
-├── index.html         # Game interface
-└── styles.css         # Styling
+│   ├── index.ts    # Game logic and classes
+│   └── app.ts      # UI implementation
+├── index.html      # Main HTML file
+├── styles.css      # Styling
+├── tsconfig.json   # TypeScript configuration
+├── bs-config.json  # Browser-sync configuration
+└── package.json    # Project dependencies
 ```
 
-## How to Play
+### Available Scripts
 
-1. **Slots**
-   - Enter bet amount
-   - Click "Spin Slots"
-   - Match 3 symbols to win
-   - Different symbols have different payouts
+- `npm start`: Compiles TypeScript and starts lite-server with browser-sync
+- `npm run build`: Builds the TypeScript files
+- `npm run watch`: Watches for file changes and rebuilds
 
-2. **Roulette**
-   - Enter bet amount
-   - Select bet type (red/black/number)
-   - For number bets, enter a number (0-36)
-   - Click "Spin Roulette"
+### Development Server Features
 
-## Error Handling
+- Live reload on file changes
+- Automatic browser refresh
+- Multiple browser testing
+- Network access via external URL
+- UI for controlling sync options
 
-The game implements various safety checks:
-- Insufficient funds validation
-- Invalid bet amount handling
-- Invalid number selection for roulette
-- Proper type checking for all inputs
+## Technical Details
 
-## Browser Support
-
-Tested and working on:
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a new Pull Request
+- Built with TypeScript for type safety
+- Uses ES6+ features and ES Modules
+- Browser-based UI with no framework dependencies
+- Modular design for easy expansion
+- Development tools:
+  - lite-server for serving files
+  - browser-sync for development convenience
+  - ts-node for TypeScript execution
+  - TypeScript compiler for building
