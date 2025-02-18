@@ -4,7 +4,7 @@ A browser-based casino application featuring Slots and Roulette games, built wit
 
 ## Screenshot
 
-![Screenshot](casinogame.jpg)
+![Screenshot](./public/images/casinogame.jpg)
 
 ## Features
 
@@ -93,13 +93,16 @@ The server will automatically reload when you make changes to the source files.
 ```
 casino-games/
 ├── src/
-│   ├── index.ts    # Game logic and classes
-│   └── app.ts      # UI implementation
-├── index.html      # Main HTML file
-├── styles.css      # Styling
-├── tsconfig.json   # TypeScript configuration
-├── bs-config.json  # Browser-sync configuration
-└── package.json    # Project dependencies
+│   ├── index.ts        # Game logic and classes
+│   └── app.ts          # UI implementation
+├── public/
+│   ├── index.html      # Main HTML file
+│   ├── styles.css      # Styling
+│   └── images/
+│       └── casinogame.jpg  # Screenshot
+├── tsconfig.json       # TypeScript configuration
+├── bs-config.json      # Browser-sync configuration
+└── package.json        # Project dependencies
 ```
 
 ### Available Scripts
